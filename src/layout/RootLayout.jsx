@@ -1,4 +1,5 @@
 import {Outlet} from "react-router-dom";
+import '../assets/reset.css';
 
 const RootLayout = () => {
 
