@@ -1,9 +1,10 @@
-import {NavLink, useLocation, useNavigate, useRouteError} from 'react-router-dom';
+import { useLocation, useNavigate, useRouteError} from 'react-router-dom';
 // 랩탑, 홈 이모티콘
 import { Laptop, HomeIcon } from "lucide-react";
 
 import styles from './ErrorPage.module.scss';
 import {useEffect} from "react";
+import Button from "../components/Button.jsx";
 
 const ErrorPage = () => {
 
@@ -21,7 +22,7 @@ const ErrorPage = () => {
     }, []);
 
     // css deconstructuring
-    const {button, buttonIcon, buttonWrapper, container, content, description, iconWrapper, icon, title} = styles;
+    const {buttonWrapper, container, content, description, iconWrapper, icon, title} = styles;
 
     // 이전 페이지 버튼 누를 시, 상황에 따른 이동
     const goBackHandler = () => {
@@ -47,13 +48,9 @@ const ErrorPage = () => {
                 </p>
 
                 <div className={buttonWrapper}>
-                    <button
-                        className={button}
-                        onClick={goBackHandler}
-                    >
-                       <HomeIcon className={buttonIcon}/>
-                    Return Home
-                    </button>
+                    <Button onClick={goBackHandler} content={window.history.length > 1 ? 'Return to Previous Page' : 'Return Home'}>
+                        <HomeIcon />
+                    </Button>
                 </div>
             </div>
         </div>
