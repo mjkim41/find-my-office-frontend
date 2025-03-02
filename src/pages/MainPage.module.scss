@@ -1,128 +1,71 @@
-@import '../App.scss';
+.catchPhraseContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 30px;
 
-.bodyWrapper {
-  width: 100%;
-  min-height: 100vh;
-  background-color: #fff;
+        h1 {
+            font-size: 65px;
+            padding: 0;
+            line-height: 120%;
+            margin: 0;
+
+            @media (max-width: 1210px) {
+                font-size: 50px;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 30px;
+            }
+        }
 }
 
-.navWrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 0;
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+.segmentControlContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
 }
 
-.navContainer {
-  width: 90%;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.mainWrapper {
+    width: 100%;
+    padding: 10px 100px;
+
+    @media (max-width: 1210px) {
+        padding: 10px 50px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 10px 20px;
+    }
 }
 
-// 이미지 로고 및 모바일 아코디언 버튼
-.logoAndAcordion {
-  display: flex;
-  flex-direction: row;
+// 카페 지도 + 리스트
+.cafeListWrapper {
+    display: flex;
+    flex-direction: row;
+    widtH: 100%;
+    height: 90vh;
+    gap: 35px;
+    transition: all 0.3s ease-in-out; // segment control로 전환 시 부드럽게 전환
 
-  .accordionHeader {
+    @media (max-width: 1210px) {
+        gap: 20px;
+    }
+}
+
+// 맵으로 보여주는 카페리스트
+.cafesByMap {
+    flex: 1;
     display: flex;
     align-items: center;
-    cursor: pointer;
-  }
+}
 
-  .logoContainer {
-    text-decoration: none;
-    cursor: pointer;
+// 리스트로 보여주는 카페 리스트
+.cafesByList {
     display: flex;
-    align-items: center;
-    padding-left: 10px;
-  }
-
-
-  .logoImage {
-    width: 40px;
-    height: 40px;
-    object-fit: contain;
-  }
-
-
-}
-
-
-.navMenuContainer {
-  display: flex;
-  align-items: center;
-}
-
-.navMenu {
-  display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  gap: 2rem;
-
-  li {
     position: relative;
-    display: flex;
-    align-items: center;
-  }
-
-  a {
-    text-decoration: none;
-    color: #000;
-    font-size: map-get(map-get($navText, desktop), font-size);
-    font-weight: map-get(map-get($navText, desktop), font-weight);
-    letter-spacing: map-get(map-get($navText, desktop), letter-spacing);
-    line-height: map-get(map-get($navText, desktop), line-height);
-    font-family: map-get(map-get($navText, desktop), font-family);
-    padding: 0.5rem 0;
-    transition: all 0.3s ease;
-    display: block;
-
-
-    &:hover {
-      opacity: 0.7;
-    }
-  }
-
-}
-
-@media (max-width: 768px) {
-  .navContainer {
     flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .navMenuContainer {
-    width: 100%;
-    margin-top: 10px;
-    //display: none;
-    position: relative; // 메뉴위치 absolute 거는 용
-  }
-
-  .navMenu {
-    flex-direction: column;
-    width: 100%;
-    gap: 0;
-    position: absolute;
-    top: 20%;
-    z-index: 10;
-
-    a {
-      font-size: map-get(map-get($navText, mobile), font-size);
-      font-weight: map-get(map-get($navText, mobile), font-weight);
-      letter-spacing: map-get(map-get($navText, mobile), letter-spacing);
-      line-height: map-get(map-get($navText, mobile), line-height);
-      font-family: map-get(map-get($navText, mobile), font-family);
-      padding: 5px 0 5px 0;
-    }
-  }
+    flex: 1;
+    overflow-y: auto;
 }
-
-
-

@@ -1,0 +1,120 @@
+@import '../../App.module';
+
+.wrapper {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.topBar {
+  height: 7px;
+  background-color: map-get(map-get($colorPalette, woodAndPlant), beige);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.cardContainer {
+  padding: 5px 24px 5px 24px;
+  border: 2px solid map-get(map-get($colorPalette, woodAndPlant), beige);
+  width: 100%;
+}
+
+.descriptionContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.titleAndRating {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+// 상호명
+.title {
+    color: map-get($title, color);
+    line-height: map-get($title, line-height);
+    letter-spacing: map-get($title, letter-spacing);
+    font-size: map-get(map-get($title, font-size), desktop);
+}
+
+
+.address, .hour, .distance, .divider {
+  color: map-get($description, color);
+  line-height: map-get($description, line-height);
+  letter-spacing: map-get($description, letter-spacing);
+  font-size: map-get(map-get($description, font-size), desktop);
+  font-weight: 530;
+}
+
+.hoursAndDistanceContainer {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  color: rgb(55, 65, 81);
+  gap: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid map-get(map-get($colorPalette, woodAndPlant), beige);
+}
+
+.divider {
+  color: rgb(156, 163, 175);
+}
+
+.titleSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.thumbsUp {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  padding: 1rem;
+  border-top: 1px solid rgb(243, 244, 246);
+}
+
+.imageContainer {
+  aspect-ratio: 4/3;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 1210px) {
+  .title {
+    font-size: map-get(map-get($title, font-size), tablet);
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: map-get(map-get($title, font-size), mobile);
+  }
+}
+
+@media (max-width: 1210px) {
+  .address, .hour, .distance, .divider  {
+    font-size: map-get(map-get($description, font-size), tablet);
+  }
+}
+
+@media (max-width: 768px) {
+  .address, .hour, .distance, .divider  {
+    font-size: map-get(map-get($description, font-size), mobile);
+  }
+}
