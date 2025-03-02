@@ -7,4 +7,4 @@
    npm install lucide-react
 
 ## Key Features
-1) Geolocaitno 을 이용한 실시간 위치 파악
+1) Geolocation 을 이용한 실시간 위치 파악
