@@ -2,7 +2,7 @@ import NavBar from "./NavBar.jsx";
 
 const Header = () => {
     return (
-        <header>
+        <header style={{position: 'fixed', width:'100%'}}>
             <NavBar />
         </header>
     );

@@ -1,3 +1,19 @@
+
+.mainWrapper {
+    width: 100%;
+    padding: 85px 100px 10px 100px;
+    // header만큼 밑으로 내려주기
+
+    @media (max-width: 1210px) {
+        padding: 85px 50px 10px 50px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 85px 20px 10px 20px;
+    }
+}
+
+
 .catchPhraseContainer {
         display: flex;
         flex-direction: column;
@@ -27,25 +43,12 @@
     margin-bottom: 25px;
 }
 
-.mainWrapper {
-    width: 100%;
-    padding: 10px 100px;
-
-    @media (max-width: 1210px) {
-        padding: 10px 50px;
-    }
-
-    @media (max-width: 768px) {
-        padding: 10px 20px;
-    }
-}
-
 // 카페 지도 + 리스트
 .cafeListWrapper {
     display: flex;
     flex-direction: row;
     widtH: 100%;
-    height: 90vh;
+    height: 85vh;
     gap: 35px;
     transition: all 0.3s ease-in-out; // segment control로 전환 시 부드럽게 전환
 
