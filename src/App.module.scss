@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: 0;
+}
+
+// 광역변수
+$colorPalette: (
+        woodAndPlant: (
+                beige: #EBE2D0,
+                brown: #A38760,
+                green: #77876D,
+                coffee: #A67B5B,
+                commonGray: rgba(178, 178, 178, 0.3)
+        ),
+);
+
+// 글씨 스타일
+$description: (
+        color: #757575,
+        line-height: 1.4em,
+        font-size: (
+                mobile: 14px,
+                tablet: 14px,
+                desktop: 16px
+        )
+);
+
+$title: (
+        color: #1E1E1E,
+        line-height: 1.2em,
+        letter-spacing: -0.02em,
+        font-size: (
+                mobile: 18px,
+                tablet: 22px,
+                desktop: 24px
+        )
+)

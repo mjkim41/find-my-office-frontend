@@ -1,0 +1,71 @@
+.catchPhraseContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        margin-bottom: 30px;
+
+        h1 {
+            font-size: 65px;
+            padding: 0;
+            line-height: 120%;
+            margin: 0;
+
+            @media (max-width: 1210px) {
+                font-size: 50px;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 30px;
+            }
+        }
+}
+
+.segmentControlContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.mainWrapper {
+    width: 100%;
+    padding: 10px 100px;
+
+    @media (max-width: 1210px) {
+        padding: 10px 50px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 10px 20px;
+    }
+}
+
+// 카페 지도 + 리스트
+.cafeListWrapper {
+    display: flex;
+    flex-direction: row;
+    widtH: 100%;
+    height: 90vh;
+    gap: 35px;
+    transition: all 0.3s ease-in-out; // segment control로 전환 시 부드럽게 전환
+
+    @media (max-width: 1210px) {
+        gap: 20px;
+    }
+}
+
+// 맵으로 보여주는 카페리스트
+.cafesByMap {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+// 리스트로 보여주는 카페 리스트
+.cafesByList {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: auto;
+}

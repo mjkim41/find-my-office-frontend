@@ -1,0 +1,51 @@
+@import '../../../App.module.scss';
+
+.searchBarContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  border-radius: 10px;
+  background-color: rgba(120, 120, 128, 0.15);
+  padding: 10px 15px 10px 8px;
+  gap: 7px;
+  height: 36px;
+}
+
+.searchIconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchIcon {
+  width: 18px;
+  height: 18px;
+  color: #ffffff;
+}
+
+.searchInput {
+  background: transparent;
+  border: none;
+  outline: none;
+  min-width: 290px;
+  color: map-get($description, color);
+  line-height: map-get($description, line-height);
+  letter-spacing: map-get($description, letter-spacing);
+  font-size: map-get(map-get($description, font-size), desktop);
+
+  &::placeholder {
+    color: map-get($description, color);
+  }
+}
+
+
+@media (max-width: 1210px) {
+  .searchBarContainer {
+    width: 100%;
+  }
+
+  .searchInput {
+    font-size: map-get(map-get($description, font-size), tablet);
+  }
+}

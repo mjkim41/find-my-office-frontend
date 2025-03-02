@@ -4,7 +4,7 @@ import { Laptop, HomeIcon } from "lucide-react";
 
 import styles from './ErrorPage.module.scss';
 import {useEffect} from "react";
-import Button from "../components/Button.jsx";
+import Button from "../components/ui/Button.jsx";
 
 const ErrorPage = () => {
 

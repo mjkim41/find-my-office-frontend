@@ -1,0 +1,105 @@
+@import '../../../App.module';
+
+.selectContainer {
+  width: 140px;
+  display: flex;
+  position: relative;
+}
+
+// 눈에 보이는 부분
+.select {
+  width: 100%;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: 1px solid #D9D9D9;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #efeeee;
+  }
+}
+
+// 선택된 option 표시
+.selectedText {
+  color: map-get($description, color);
+  line-height: map-get($description, line-height);
+  letter-spacing: map-get($description, letter-spacing);
+  font-size: map-get(map-get($description, font-size), desktop);
+
+  @media (max-width: 1210px) {
+    font-size: map-get(map-get($description, font-size), tablet);
+  }
+
+  @media (max-width: 768px) {
+    font-size: map-get(map-get($description, font-size), mobile);
+  }
+
+}
+
+.chevron {
+  color: map-get($description, color);
+  transition: transform 0.3s ease;
+}
+
+// 드롭다운 아이콘 누를 시
+.rotate {
+  transform: rotate(180deg);
+}
+
+.dropdown {
+  width: 100%;
+  position: absolute;
+  top: calc(100%);
+  left: 0;
+  right: 0;
+  z-index: 10;
+  border-radius: 12px;
+  padding: 8px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.2s ease;
+}
+
+.option {
+  color: map-get($description, color);
+  line-height: map-get($description, line-height);
+  letter-spacing: map-get($description, letter-spacing);
+  font-size: map-get(map-get($description, font-size), desktop);
+  background-color: #ffffff;
+  height: 36px;
+  padding: 0 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 1210px) {
+    font-size: map-get(map-get($description, font-size), table);
+  }
+
+  @media (max-width: 768px) {
+    font-size: map-get(map-get($description, font-size), mobile);
+  }
+
+  &:hover {
+    background-color: #efefef;
+  }
+}
+.selected {
+  color: white;
+  background-color: rgba(44, 44, 46, 0.5);
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
