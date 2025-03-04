@@ -4,11 +4,13 @@ import styles from "./MainPage.module.scss";
 import SegmentControl from "../components/ui/SegmangControl.jsx";
 import {useContext} from "react";
 import MenuContext from "../components/context/menuContext.js";
+import KakaoMap from "../components/KakaoMap.jsx";
 
 const MainPage = () => {
 
     // segment control에서 선택한 selected menu에 따라 카페 리스트 or 맵 중 어떤것이 보이게 할지 결정 (모바일 버전에서만 사용)
     const {selectedMenu} = useContext(MenuContext);
+
 
     return (
         <div className={styles.mainWrapper}>
@@ -25,16 +27,13 @@ const MainPage = () => {
             {selectedMenu.includes('Map') && (
                 // 지도 형식으로 보여주는 칸
                 <div className={styles.cafesByMap}>
-                    <img
-                         src='https://steemitimages.com/DQmQZ6ERpfDunnrbHAmy6cQVvXF4iQgrmg3QuggfKxd8WyE/zaq.png'
-                         style={{width: '100%'}}
-                    />
+                    <KakaoMap />
                 </div>
             )}
 
-            {/* 리스트 형식으로 보여주는 칸 */}
-            {selectedMenu.includes('List') && (
-                <div className={styles.cafesByList}>
+                {/* 리스트 형식으로 보여주는 칸 */}
+                {selectedMenu.includes('List') && (
+                    <div className={styles.cafesByList}>
                     <SearchContainer/>
                     <CardList/>
                 </div>

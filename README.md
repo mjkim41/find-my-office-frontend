@@ -13,3 +13,7 @@
 - 반응형 디자인(1210px 이상/1210px 미만 768px 초과/768px 이하)
 ![](https://velog.velcdn.com/images/kimmy25312/post/977c5ac0-4d32-446a-8c6f-60f066d62336/image.gif)
 
+## Trouble Shooting
+1) 카카오 맵 API 연동 문제
+- 문제 : Kakao is not defined 에러 메시지가 뜨며, 맵이 표시되지 않음
+- 해결방법 : 2024.12부터 kakaomap 사용시 '내 어플리케이션 > 제품설정 > 카카오맵'에도 활성화 설정을 on으로 하는 설정이 추가되었음
