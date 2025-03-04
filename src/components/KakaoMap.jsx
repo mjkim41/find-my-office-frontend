@@ -113,8 +113,9 @@
             <div className={styles.mapWrapper}>
                 <div
                     ref={mapContainerRef}
+                    className={styles.kakaoMap}
                     id="kakaoMap"
-                    style={{width: '500px', height: '500px'}}
+
                 ></div>
                 <LocationButton className={styles.locationButton} onHandleRelocate={handleRelocate} />
             </div>
